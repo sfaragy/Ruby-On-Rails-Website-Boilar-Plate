@@ -73,29 +73,29 @@ Step by Step guide to initiate the Ruby On Rails Project in Docker with Docker c
 # Step 4:
     - Build Docker images:
         Open terminal in VScode ctrl + ~
-        $ Make build
+        $ make build
 
     - Start project
-        $ Make up
+        $ make up
 
 # Step 5:
     - Database Creation
-        $ Make db-create
+        $ make db-create
 
     - Database Migration
-        $ Make db-migrate:
+        $ make db-migrate:
 
 # Step 6:
     - Restart the application
-        $ Make restart
+        $ make restart
     - Start application
-        $ Make start
+        $ make start
     - Stop application
-        $ Make stop
+        $ make stop
     - Login to the Rails Console:
-        $ Make login-app
+        $ make login-app
     - Check existing dockers:
-        $ Make ps
+        $ make ps
 
 
     

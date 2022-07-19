@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jul 19 11:45:46 2022
+# Make data base, printed on Tue Jul 19 14:35:35 2022
 
 # Variables
 
@@ -103,7 +103,7 @@ SNAP_REEXEC =
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 20695
+VSCODE_PID = 41614
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -213,7 +213,7 @@ RubyMine = /opt/RubyMine-2022.1.2/bin
 # environment
 LC_MEASUREMENT = th_TH.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 20646
+GIO_LAUNCHED_DESKTOP_FILE_PID = 41570
 # makefile (from 'Makefile', line 1)
 THIS_FILE := Makefile
 # environment
@@ -317,6 +317,7 @@ db-create:
 
 # Not a target:
 Makefile:
+ 
 #  Implicit rule search has been done.
 #  Last modified 2022-07-18 20:29:21.55699185
 #  File has been updated.
@@ -448,10 +449,9 @@ down:
 # strcache buffers: 1 (0) / strings = 70 / storage = 673 B / avg = 9 B
 # current buf: size = 8162 B / used = 673 B / count = 70 / avg = 9 B
 
- 
 # strcache performance: lookups = 106 / hit rate = 33%
 # hash-table stats:
 # Load=70/8192=1%, Rehash=0, Collisions=0/106=0%
-# Finished Make data base on Tue Jul 19 11:45:46 2022
+# Finished Make data base on Tue Jul 19 14:35:35 2022
 
  
