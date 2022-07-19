@@ -97,5 +97,10 @@ Step by Step guide to initiate the Ruby On Rails Project in Docker with Docker c
     - Check existing dockers:
         $ make ps
 
+# Step 7:
+    - Browse the page by the following URL
+        http://localhost:3001
+
+
 
     
