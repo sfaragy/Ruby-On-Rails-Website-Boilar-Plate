@@ -1,0 +1,13 @@
+# How to Create Components
+
+    -$ make lognin-app
+        
+        -$ bundle add view_component
+
+        -$ rails g component header taitle
+            out:
+                create  app/components/header_component.rb
+                invoke  test_unit
+                create    test/components/header_component_test.rb
+                invoke  erb
+                create    app/components/header_component.html.erb
