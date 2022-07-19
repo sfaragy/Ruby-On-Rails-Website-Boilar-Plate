@@ -1,0 +1,13 @@
+[2022-07-14 12:46:53.730] [exthost] [info] Extension host with pid 40709 started
+[2022-07-14 12:46:53.730] [exthost] [info] Skipping acquiring lock for /home/sfaragy/Rails/docker1/User/workspaceStorage/047a23e1a2ce9b2a4616ce7b83a4a22c.
+[2022-07-14 12:46:53.818] [exthost] [info] ExtensionService#_doActivateExtension vscode.microsoft-authentication, startup: false, activationEvent: 'onAuthenticationRequest:microsoft'
+[2022-07-14 12:46:53.858] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-07-14 12:46:53.861] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+[2022-07-14 12:46:53.863] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-07-14 12:46:53.897] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-07-14 12:46:53.907] [exthost] [info] Eager extensions activated
+[2022-07-14 12:46:53.909] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-07-14 12:46:53.920] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-07-14 12:46:53.949] [exthost] [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+[2022-07-14 12:46:58.320] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2022-07-14 12:46:58.321] [exthost] [info] Extension host with pid 40709 exiting with code 0

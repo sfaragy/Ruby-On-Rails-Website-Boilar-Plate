@@ -1,0 +1,2 @@
+module Account::LoginHelper
+end
