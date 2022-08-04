@@ -103,4 +103,97 @@ Step by Step guide to initiate the Ruby On Rails Project in Docker with Docker c
 
 
 
+# ============================================================== Components Doc ======================
+# How to Create Components
+
+    -$ make lognin-app
+        
+        -$ bundle add view_component
+
+        -$ rails g component header taitle
+            out:
+                create  app/components/header_component.rb
+                invoke  test_unit
+                create    test/components/header_component_test.rb
+                invoke  erb
+                create    app/components/header_component.html.erb
+
+
+                
+# How to test the components?
+    Please follow the link below and write the test cases as you need.
+    https://viewcomponent.org/guide/testing.html
+    Mose of the cases you have to write test cases with good assertions.
+    Also it will check the frontend view and UI matchings with tags similarty with mock
+
+
+
+
+# ============================================================== Tailwindcss in Rails Doc ======================
+  
+# Automatically configure tailwindcss in rails project
+    $ rails new my-app --css tailwind
+
+# Manually add tailwindcss in rails project
+    Step 1: Install the tailwindcss-rails gem  
+    Step 2: Run the install command to generate a tailwind.config.js file in the ./config directory.
+
+    In rails terminal: 
+        $ ./bin/bundle add tailwindcss-rails
+        $ ./bin/rails tailwindcss:install
+    
+    Step 3: Configure your template paths
+        Add the paths to all of your template files to your ./config/tailwind.config.js file.
+
+            /** @type {import('tailwindcss').Config} */ 
+            module.exports = {
+            content: [
+                './app/helpers/**/*.rb',
+                './app/javascript/**/*.js',
+                './app/views/**/*',
+            ],
+            theme: {
+                extend: {},
+            },
+            plugins: [],
+            }
+    Step 4: Add the Tailwind directives to your CSS
+        Add the @tailwind directives for each of Tailwind's layers to your application.tailwind.css file located in the ./app/assets/stylesheets directory.
+
+            @tailwind base;
+            @tailwind components;
+            @tailwind utilities;
+    Step 5: Start your build process
+        $ ./bin/dev.
+
+    Step 6: Start using Tailwind & Tailwind's utility classes in your project.
+
+    Example: 
+        <h1 class="text-3xl font-bold underline">
+            Hello world!
+        </h1>
+
+    Note: https://tailwindcss.com/docs this will give more detials about tailwindcss
+
+
+
+    Errors: 
+        After install you might get this errors below:
+            "Sprockets::Rails::Helper::AssetNotFound in Pages#home 
+            Showing /noteapp/app/views/layouts/application.html.erb where line #8 raised:
+            The asset "tailwind.css" is not present in the asset pipeline."
+
+        Solution:
+            $ bundle exec rake assets:precompile
+            Next:
+                Edit /noteapp/app/views/layouts/application.html.erb 
+
+                Find tailwind
+
+                replace with /bundle/tailwind
+
+                FInd "inter-font", 
+                
+                remove it
+
     
