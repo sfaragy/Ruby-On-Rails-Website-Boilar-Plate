@@ -103,7 +103,7 @@ Step by Step guide to initiate the Ruby On Rails Project in Docker with Docker c
 
 
 
-# ================== Components Doc ======================
+# ==== Components Doc ====
 # How to Create Components
 
     -$ make lognin-app
@@ -129,7 +129,7 @@ Step by Step guide to initiate the Ruby On Rails Project in Docker with Docker c
 
 
 
-# ================ Tailwindcss in Rails Doc ==================
+# === Tailwindcss in Rails Doc ===
   
 # Automatically configure tailwindcss in rails project
     $ rails new my-app --css tailwind
