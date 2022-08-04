@@ -32,3 +32,6 @@
 
 # Ignoring .vscode folder
 .vscode/targets.log
+
+/app/assets/builds/*
+!/app/assets/builds/.keep

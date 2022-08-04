@@ -72,3 +72,5 @@ group :test do
 end
 
 gem "view_component", "~> 2.61"
+
+gem "tailwindcss-rails", "~> 2.0"
