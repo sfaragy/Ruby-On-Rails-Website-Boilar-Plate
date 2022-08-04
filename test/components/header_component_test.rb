@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+# https://viewcomponent.org/guide/testing.html
 require "test_helper"
 
 class HeaderComponentTest < ViewComponent::TestCase

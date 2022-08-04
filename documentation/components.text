@@ -11,3 +11,12 @@
                 create    test/components/header_component_test.rb
                 invoke  erb
                 create    app/components/header_component.html.erb
+
+
+                
+# How to test the components?
+    Please follow the link below and write the test cases as you need.
+    https://viewcomponent.org/guide/testing.html
+    Mose of the cases you have to write test cases with good assertions.
+    Also it will check the frontend view and UI matchings with tags similarty with mock
+
