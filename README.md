@@ -175,7 +175,9 @@ Step by Step guide to initiate the Ruby On Rails Project in Docker with Docker c
 
     Note: https://tailwindcss.com/docs this will give more detials about tailwindcss
 
-
+    Step 7: 
+        Build tailwindcss stylesheets
+        $ rails tailwindcss:build
 
     Errors: 
         After install you might get this errors below:
