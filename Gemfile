@@ -71,6 +71,14 @@ group :test do
   gem "webdrivers"
 end
 
+group :development, :test do
+  gem 'byebug', platform: :mri
+  gem 'rspec-rails', '~> 3.5'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'database_cleaner'
+end
+
 gem "view_component", "~> 2.61"
 
 gem "tailwindcss-rails", "~> 2.0"

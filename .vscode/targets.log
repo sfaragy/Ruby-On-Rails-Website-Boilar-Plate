@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Sep  7 09:37:27 2022
+# Make data base, printed on Mon Oct 17 10:29:04 2022
 
 # Variables
 
@@ -14,8 +16,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 GDK_BACKEND = x11
 # environment
 LC_ALL = C
-# environment
-NO_AT_BRIDGE = 1
 # environment
 GNOME_SHELL_SESSION_MODE = ubuntu
 # environment
@@ -29,7 +29,7 @@ LC_NAME = th_TH.UTF-8
 # environment
 LC_NUMERIC = th_TH.UTF-8
 # environment
-VSCODE_CWD = /home/sfaragy/Rails/docker1
+VSCODE_CWD = /home/sfaragy
 # environment
 WINDOWPATH = 2
 # environment
@@ -40,14 +40,12 @@ LC_ADDRESS = th_TH.UTF-8
 MAKE_COMMAND := make
 # environment
 QT_ACCESSIBILITY = 1
-# environment
-VSCODE_GIT_ASKPASS_EXTRA_ARGS = --ms-enable-electron-run-as-node
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
 SNAP_INSTANCE_NAME = code
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/106/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/111/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -58,8 +56,6 @@ PWD = /home/sfaragy/Rails/docker1
 %D = $(patsubst %/,%,$(dir $%))
 # environment
 XDG_DATA_DIRS = /usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
-# environment
-OLDPWD = /home/sfaragy/Rails
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
 # automatic
@@ -67,7 +63,7 @@ OLDPWD = /home/sfaragy/Rails
 # environment
 NVM_INC = /home/sfaragy/.nvm/versions/node/v10.19.0/include/node
 # environment
-VSCODE_CODE_CACHE_PATH = /home/sfaragy/.config/Code/CachedData/784b0177c56c607789f9638da7b6bf3230d47a8c
+VSCODE_CODE_CACHE_PATH = /home/sfaragy/.config/Code/CachedData/d045a5eda657f4d7b676dedbfa7aab8207f8a075
 # environment
 LANG = C
 # environment
@@ -99,8 +95,6 @@ XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # environment
-GIT_ASKPASS = /snap/code/106/usr/share/code/resources/app/extensions/git/dist/askpass.sh
-# environment
 XDG_SESSION_DESKTOP = ubuntu
 # makefile (from 'Makefile', line 1)
 MAKEFILE_LIST := Makefile
@@ -109,7 +103,7 @@ SNAP_REEXEC =
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 11067
+VSCODE_PID = 32562
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -117,7 +111,7 @@ XDG_SESSION_TYPE = x11
 # environment
 BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # environment
-SESSION_MANAGER = local/l9T7CGG3:@/tmp/.ICE-unix/3703,unix/l9T7CGG3:/tmp/.ICE-unix/3703
+SESSION_MANAGER = local/l9T7CGG3:@/tmp/.ICE-unix/4235,unix/l9T7CGG3:/tmp/.ICE-unix/4235
 # automatic
 *F = $(notdir $*)
 # environment
@@ -141,7 +135,7 @@ XMODIFIERS = @im=ibus
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-SHLVL = 1
+SHLVL = 0
 # environment
 MAKELEVEL := 0
 # default
@@ -149,13 +143,9 @@ MAKE = $(MAKE_COMMAND)
 # environment
 SNAP_COOKIE = vxG66KCih-PJyCrFYqzgV9st5DcXWvOBt02FbWGEuP1aOXe46lgq
 # environment
-PATH = /home/sfaragy/.nvm/versions/node/v10.19.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/bin/idea:/snap/bin
+PATH = /home/sfaragy/.rbenv/shims:/home/sfaragy/.rbenv/bin:/home/sfaragy/.nvm/versions/node/v10.19.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/bin/idea:/snap/bin
 # default
 MAKEFILES := 
-# environment
-VSCODE_GIT_IPC_HANDLE = /run/user/1000/vscode-git-188a979c26.sock
-# environment
-VSCODE_GIT_ASKPASS_NODE = /snap/code/106/usr/share/code/code
 # environment
 LC_MONETARY = th_TH.UTF-8
 # automatic
@@ -165,19 +155,15 @@ SNAP_USER_COMMON = /home/sfaragy/snap/code/common
 # environment
 LC_TIME = th_TH.UTF-8
 # environment
-VSCODE_GIT_ASKPASS_MAIN = /snap/code/106/usr/share/code/resources/app/extensions/git/dist/askpass-main.js
+SNAP = /snap/code/111
 # environment
-SNAP = /snap/code/106
+INVOCATION_ID = a41586f8526f4589b481fdcf452c1fd9
 # environment
-INVOCATION_ID = 1f7587d53e74418b819b6bf40c664604
-# environment
-SNAP_REVISION = 106
+SNAP_REVISION = 111
 # environment
 SNAP_REAL_HOME = /home/sfaragy
 # environment
 USERNAME = sfaragy
-# environment
-TERM_PROGRAM = vscode
 # environment
 LC_TELEPHONE = th_TH.UTF-8
 # environment
@@ -187,13 +173,13 @@ LESSCLOSE = /usr/bin/lesspipe %s %s
 # environment
 XDG_CURRENT_DESKTOP = Unity
 # environment
-LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+LS_COLORS = 
 # automatic
 +F = $(notdir $+)
 # environment
 DESKTOP_SESSION = ubuntu
 # environment
-ORIGINAL_XDG_CURRENT_DESKTOP = Unity
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -205,7 +191,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := help
 # environment
-SYSTEMD_EXEC_PID = 3726
+SYSTEMD_EXEC_PID = 4256
 # environment
 DISPLAY = :1
 # environment
@@ -215,19 +201,21 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-SNAP_DATA = /var/snap/code/106
+SNAP_DATA = /var/snap/code/111
 # environment
 SNAP_CONTEXT = vxG66KCih-PJyCrFYqzgV9st5DcXWvOBt02FbWGEuP1aOXe46lgq
 # environment
-MANAGERPID = 3267
+MANAGERPID = 3923
 # environment
 RubyMine = /opt/RubyMine-2022.1.2/bin
 # environment
 LC_MEASUREMENT = th_TH.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 11023
+GIO_LAUNCHED_DESKTOP_FILE_PID = 32515
 # makefile (from 'Makefile', line 1)
 THIS_FILE := Makefile
+# environment
+_ = /snap/code/111/usr/share/code/code
 # environment
 LC_PAPER = th_TH.UTF-8
 # environment
@@ -235,13 +223,11 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-COLORTERM = truecolor
-# environment
 GDK_PIXBUF_MODULE_FILE = /home/sfaragy/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
 NVM_CD_FLAGS = 
 # environment
-JOURNAL_STREAM = 8:45068
+JOURNAL_STREAM = 8:37857
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -253,21 +239,21 @@ QT_IM_MODULE = ibus
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-a7aa7128-1.71.0-main.sock
-# environment
-TERM = xterm-256color
+VSCODE_IPC_HOOK = /run/user/1000/vscode-a7aa7128-1.72.2-main.sock
 # environment
 SNAP_NAME = code
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/106/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/111/usr/share/glib-2.0/schemas
 # default
 .RECIPEPREFIX := 
 # automatic
 <F = $(notdir $<)
 # environment
-SNAP_VERSION = 784b0177
+SNAP_VERSION = d045a5ed
 # default
 SUFFIXES := 
+# environment
+RBENV_SHELL = bash
 # environment
 VSCODE_CLI = 1
 # environment
@@ -277,11 +263,9 @@ SNAP_COMMON = /var/snap/code/common
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
 # environment
-SNAP_USER_DATA = /home/sfaragy/snap/code/106
+SNAP_USER_DATA = /home/sfaragy/snap/code/111
 # environment
 XDG_MENU_PREFIX = gnome-
-# environment
-TERM_PROGRAM_VERSION = 1.71.0
 # environment
 GDMSESSION = ubuntu
 # environment
@@ -289,7 +273,7 @@ LC_IDENTIFICATION = th_TH.UTF-8
 # environment
 SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
 # variable set hash-table stats:
-# Load=139/1024=14%, Rehash=0, Collisions=5/170=3%
+# Load=130/1024=13%, Rehash=0, Collisions=4/161=2%
 
 # Pattern-specific Variable Values
 
@@ -306,6 +290,7 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 # No implicit rules.
 
 # Files
+ 
 
 start:
 #  Phony target (prerequisite of .PHONY).
@@ -326,9 +311,6 @@ db-migrate:
 db-create:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
- 
-make: *** No rule to make target 'all'.  Stop.
-
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 37):
@@ -470,6 +452,6 @@ down:
 # strcache performance: lookups = 108 / hit rate = 33%
 # hash-table stats:
 # Load=72/8192=1%, Rehash=0, Collisions=0/108=0%
-# Finished Make data base on Wed Sep  7 09:37:27 2022
+# Finished Make data base on Mon Oct 17 10:29:04 2022
 
  
