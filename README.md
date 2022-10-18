@@ -198,4 +198,168 @@ Step by Step guide to initiate the Ruby On Rails Project in Docker with Docker c
                 
                 remove it
 
+
+# Install RSPEC
+## Step 1 — Delete Any Existing Test Folders
+
+If I’ve generated a new rails app using rails new <app> without using any additional flags, I remove the app/test directory:
+
+## Step 2 — Add Gems
+
+I add the following gems to the :development, :test group in my Gemfile and run bundle.
+
+    group :development, :test do
+        gem 'byebug', platform: :mri
+        gem 'rspec-rails', '~> 3.5'
+        gem 'factory_girl_rails'
+        gem 'capybara'
+        gem 'database_cleaner'
+    end
+
+   Briefly running through these gems one-by-one:
+
+    byebug allows for step-through debugging by placing byebug anywhere in the app.
+    rspec-rails is the testing framework.
+    factory_girl_rails replaces Rails fixtures for generating data to use in the tests.
+    capybara provides helper methods that make integration testing easier.
+    database_cleaner allows us to manage our testing database with precision: we decide when to wipe data (e.g. after, before tests). 
+
+
+## make build
+
+## Step 3 — Run Rspec Generator
+
+Currently, the app directory doesn’t include a app/test/ directory (remember we deleted it in step 1), so I have nowhere to put my tests. This is where the Rspec generator, which will generate app/spec/, comes in:
+
+    make login-app
+    rails generate rspec:install
+
+This adds the following files in a app/spec directory:
+
+    spec/spec_helper.rb
+    spec/rails_helper.rb
+
+and app/.rspec in the project’s root directory.
+
+Now I’ve added the proper files to use Rspec instead of Minitest::Unit, but I still need to do a little more configuration before Rspec will work with the factory_girl_rails, capybara, and database_cleaner gems.
+
+## Step 4 — Configure Rspec
+
+Open up spec/rails_helper.rb. All of the instructions from this section will be implemented in this file. I include the complete rails_helper.rb file at the bottom of this section.
+
+## database_cleaner
+
+To use database_cleaner, I add require 'database_cleaner' below require 'rspec/rails', and change the following line in the Rspec.configure bloc from
+
+    config.use_transactional_fixtures = true 
+    to 
+    config.use_transactional_fixtures = false
+
+Then I add the following to the Rspec.configure block:
+
+    RSpec.configure do |config|  #...omitted code...  config.use_transactional_fixtures = false  config.before(:suite) do
+        DatabaseCleaner.clean_with(:truncation)
+    end  config.before(:each) do
+        DatabaseCleaner.strategy = :transaction
+    end  config.before(:each, :js => true) do
+        DatabaseCleaner.strategy = :truncation
+    end  config.before(:each) do
+        DatabaseCleaner.start
+    end  config.after(:each) do
+        DatabaseCleaner.clean
+    end  config.before(:all) do
+        DatabaseCleaner.start
+    end  config.after(:all) do
+        DatabaseCleaner.clean
+    end #...omitted code...
     
+    end
+
+## capybara
+
+
+To use capybara, I add require 'capybara/rspec' after require 'rspec/rails'.
+
+    factory_girl_rails
+
+To use factory_girl_rails, I remove this line:
+    config.fixture_path = "#{::Rails.root}/spec/fixtures"
+
+And add to the Rspec.configure block:
+
+    config.include FactoryGirl::Syntax::Methods
+
+This will give me access to FactoryGirl methods like build and create. I place all of my factories in the spec/factories directory.
+## Devise
+
+If my app uses devise for authentication, I add:
+
+    config.include Devise::Test::ControllerHelpers, type: :controller
+
+to the Rspec.configure block. This gives me helper methods like sign_in.
+
+## miscellaneous pointers
+
+At the bottom of Rspec.configure block, you’ll see the following line:
+
+    config.infer_spec_type_from_file_location!
+
+This allows rails to infer from the location of the spec file what kind of test it is and then give you context-specific helper methods (e.g. using get and post in controller tests if the file is found in the spec/controllers directory).
+
+My complete rails_helper.rb file looks like this:
+
+    ENV['RAILS_ENV'] ||= 'test'require 'spec_helper'
+        require File.expand_path('../../config/environment', __FILE__)
+        require 'rspec/rails'
+        require 'database_cleaner'
+        require 'capybara/rspec'Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+        ActiveRecord::Migration.maintain_test_schema!RSpec.configure do |config|
+        config.use_transactional_fixtures = false
+        config.include FactoryGirl::Syntax::Methods
+        config.include Devise::Test::ControllerHelpers, type: :controller
+        config.before(:suite) do
+            DatabaseCleaner.clean_with(:truncation)
+        end
+        config.before(:each) do
+            DatabaseCleaner.strategy = :transaction
+        end
+        config.before(:each, js: true) do
+            DatabaseCleaner.strategy = :truncation
+        end
+        config.before(:each) do
+            DatabaseCleaner.start
+        end
+        config.after(:each) do
+            DatabaseCleaner.clean
+        end
+        config.before(:all) do
+            DatabaseCleaner.start
+        end
+        config.after(:all) do
+            DatabaseCleaner.clean
+        end
+        config.infer_spec_type_from_file_location!
+    end
+
+
+## Step 5 — Write Tests
+
+Now I’m ready to write some tests, all of which reside in the spec directory. Typically my spec directory looks something like this:
+spec/
+  controllers/
+    user_controller_spec.rb
+    resource_controller_spec.rb
+  factories/
+    user.rb
+    resource.rb
+  models/
+    user_spec.rb
+    resource_spec.rb
+  mailers/
+    mailer_spec.rb
+  services/
+    service_spec.rb  
+  rails_helper.rb
+  spec_helper.rb
+
+

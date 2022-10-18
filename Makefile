@@ -1,5 +1,5 @@
 THIS_FILE := $(lastword $(MAKEFILE_LIST))
-.PHONY: help build up start down destroy stop restart logs logs-app ps login-app db-shell db-create db-migrate
+.PHONY: help build up start down destroy stop restart logs logs-app ps login-app db-shell db-create db-migrate test
 help:
 	make -pRrq  -f $(THIS_FILE) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
 # Docker + start + restart etc.
@@ -37,6 +37,9 @@ db-create:
 	docker exec -it docker1_app_1 rake db:create
 db-migrate:
 	docker exec -it docker1_app_1 rake db:migrate
+
+test:
+	docker exec -it docker1_app_1 rspec
 
 # rails generation
 # controller:
